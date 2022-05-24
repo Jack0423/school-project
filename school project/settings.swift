@@ -13,25 +13,25 @@ struct settings: View {
     var body: some View {
         Spacer()
         Menu {
-                               Button {
-                                   navigateTo = AnyView(bird())
-                                   isNavigationActive = true
-                               } label: {
-                                   Label("Create an Item", systemImage: "doc")
-                               }
+            Button {
+                navigateTo = AnyView(bird())
+                isNavigationActive = true
+            } label: {
+                Label("Create an Item", systemImage: "doc")
+            }
                                
-                               Button {
-                                   navigateTo = AnyView(bird())
-                                   isNavigationActive = true
-                               } label: {
-                                   Label("Create a category", systemImage: "folder")
-                               }
-                           } label: {
-                               Label("Add", systemImage: "plus")
-                           }
-      
+            Button {
+                navigateTo = AnyView(bird())
+                isNavigationActive = true
+            } label: {
+                Label("Create a category", systemImage: "folder")
+            }
+        } label: {
+            Label("Add", systemImage: "plus")
+        }
     }
 }
+
 
 struct settings_Previews: PreviewProvider {
     static var previews: some View {

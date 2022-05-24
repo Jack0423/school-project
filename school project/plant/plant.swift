@@ -28,17 +28,18 @@ struct plant: View {
             NavigationLink ("銀合歡", destination: plant4(plantd:"銀合歡"))
             NavigationLink ("台灣海桐", destination: plant5(plante:"台灣海桐"))
             Group{
-            NavigationLink ("海檬果", destination: plant6(plantf:"海檬果"))
-            NavigationLink ("水筆仔", destination: plant7(plantg:"水筆仔"))
-            NavigationLink ("馬鞍藤", destination: plant8(planth:"馬鞍藤"))
-            NavigationLink ("林投", destination: plant9(planti:"林投"))
-            NavigationLink ("團扇仙人掌", destination: plant10(plantj:"團扇仙人掌"))
-            NavigationLink ("test", destination: planttest(plantx:"test"))
-                    }
-            }.background(Color(UIColor.secondarySystemBackground))
+                NavigationLink ("海檬果", destination: plant6(plantf:"海檬果"))
+                NavigationLink ("水筆仔", destination: plant7(plantg:"水筆仔"))
+                NavigationLink ("馬鞍藤", destination: plant8(planth:"馬鞍藤"))
+                NavigationLink ("林投", destination: plant9(planti:"林投"))
+                NavigationLink ("團扇仙人掌", destination: plant10(plantj:"團扇仙人掌"))
+                NavigationLink ("test", destination: planttest(plantx:"test"))
+            }
+        }   .background(Color(UIColor.secondarySystemBackground))
             .navigationTitle("植物")
-                        }
-                    }
+    }
+}
+
 
 struct plant_Previews: PreviewProvider {
     static var previews: some View {
