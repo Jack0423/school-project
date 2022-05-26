@@ -14,14 +14,14 @@ struct settings: View {
         Spacer()
         Menu {
             Button {
-                navigateTo = AnyView(bird())
+                navigateTo = AnyView(birdmenu())
                 isNavigationActive = true
             } label: {
                 Label("Create an Item", systemImage: "doc")
             }
                                
             Button {
-                navigateTo = AnyView(bird())
+                navigateTo = AnyView(birdmenu())
                 isNavigationActive = true
             } label: {
                 Label("Create a category", systemImage: "folder")

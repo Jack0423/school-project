@@ -14,15 +14,15 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            ScrollView{
-                VStack{
-                    HStack{
+            ScrollView {
+                VStack {
+                    HStack {
                         Text("選取主題")
                             .padding()
                             .font(.largeTitle.bold())
                         Spacer()
                         NavigationLink {
-                            Text("Person View")
+                            settings()
                         } label: {
                             Image(systemName: "gearshape")
                                 .padding()
@@ -30,12 +30,12 @@ struct ContentView: View {
                                 .foregroundColor(.blue)
                         }
                     }
-                    Spacer()
-                    
+                Spacer()
+                
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing:20){
                             NavigationLink{
-                                bird()
+                                birdmenu()
                             }label: {
                                 ZStack{
                                     Image("bird")
