@@ -11,9 +11,6 @@ import Foundation
 import CoreLocation
 
 
-
-
-
 struct place: View {
     
     struct AnnotatedItem: Identifiable {
@@ -21,7 +18,6 @@ struct place: View {
         var name: String
         var coordinate: CLLocationCoordinate2D
         
-       
     }
     private var pointsOfInterest = [
         AnnotatedItem(name: "廁所", coordinate: .init(latitude: 24.810323803153736, longitude: 120.91245398450795)),
@@ -33,7 +29,7 @@ struct place: View {
 
     init() {
         MKMapView.appearance().mapType = .satellite
-       }
+    }
     var body: some View {
         
         Map(coordinateRegion: $region)
@@ -41,12 +37,10 @@ struct place: View {
         
         Map(coordinateRegion: $region, annotationItems: pointsOfInterest) { item in
             MapMarker(coordinate: item.coordinate, tint: .red)
-        }
-        .edgesIgnoringSafeArea(.all)
+        }.edgesIgnoringSafeArea(.all)
         
         Map(coordinateRegion: $region, interactionModes: [], showsUserLocation: true, userTrackingMode: .constant(.follow))
 
-        
     }
 }
 

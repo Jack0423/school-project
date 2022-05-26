@@ -10,7 +10,6 @@ import MapKit
 
 struct MapViewUIKit: UIViewRepresentable {
     
-   
     // 1.
     let region: MKCoordinateRegion
     let mapType : MKMapType
@@ -37,8 +36,6 @@ struct bruh: View {
         let id = UUID()
         var name: String
         var coordinate: CLLocationCoordinate2D
-        
-       
     }
     private var annotationItems = [
         AnnotatedItem(name: "廁所", coordinate: .init(latitude: 24.810323803153736, longitude: 120.91245398450795)),
@@ -57,19 +54,16 @@ struct bruh: View {
             MapViewUIKit(region: region, mapType: mapType)
                 .edgesIgnoringSafeArea(.all)
             VStack {
-             
                 Spacer()
                 // 4
                 Picker("", selection: $mapType) {
                     Text("Hybrid").tag(MKMapType.hybrid)
                     Text("Standard").tag(MKMapType.standard)
                     Text("Satellite").tag(MKMapType.satellite)
-                }
-                .pickerStyle(SegmentedPickerStyle())
-                .offset(y: -40)
-                .font(.largeTitle)
+                }.pickerStyle(SegmentedPickerStyle())
+                    .offset(y: -40)
+                    .font(.largeTitle)
             }
         }
-        
     }
 }
