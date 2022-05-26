@@ -77,7 +77,7 @@ struct plant3: View {
                 }.font(.system(size: 25, design: .rounded))
                     .foregroundColor(.black).padding()
                 
-
+                
                 Image("木麻黃樹")
                     .resizable()
                     .scaledToFit()
