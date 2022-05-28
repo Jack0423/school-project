@@ -14,24 +14,23 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack {
-                    HStack {
-                        Text("選取主題")
-                            .padding()
-                            .font(.largeTitle.bold())
-                        Spacer()
-                        NavigationLink {
-                            settings()
-                        } label: {
-                            Image(systemName: "gearshape")
-                                .padding()
-                                .font(.largeTitle)
-                                .foregroundColor(.blue)
-                        }
+            VStack {
+                /*HStack {
+                    Text("選取主題")
+                        .padding(.horizontal)
+                        .font(.largeTitle.bold())
+                    Spacer()
+                    NavigationLink {
+                        settings()
+                    } label: {
+                        Image(systemName: "gearshape")
+                            .padding(.horizontal)
+                            .font(.largeTitle)
+                            .foregroundColor(.blue)
                     }
-                Spacer()
-                
+                }*/
+                //Spacer()
+                ScrollView {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing:20){
                             NavigationLink{
@@ -41,7 +40,7 @@ struct ContentView: View {
                                     Image("bird")
                                         .resizable()
                                         .scaledToFill()
-                                        .frame(width: 350, height: 650)
+                                        .frame(width: 350, height: UIScreen.main.bounds.height-150 )
                                         .clipped()
                                         .cornerRadius(30)
                                     Text("水鳥")
@@ -50,7 +49,7 @@ struct ContentView: View {
                                         .foregroundColor(.black)
                                         .padding(EdgeInsets(top: 0, leading: 125, bottom: 0, trailing: 125))
                                         .cornerRadius(10)
-                                        .padding(EdgeInsets(top: 610, leading: 15, bottom: 0, trailing: 15))
+                                        .padding(EdgeInsets(top: UIScreen.main.bounds.height-190, leading: 15, bottom: 0, trailing: 15))
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .top, endPoint: .bottom))
                                         .cornerRadius(30)
                                         .padding()
@@ -64,7 +63,7 @@ struct ContentView: View {
                                     Image("plant")
                                         .resizable()
                                         .scaledToFill()
-                                        .frame(width: 350, height: 650)
+                                        .frame(width: 350, height: UIScreen.main.bounds.height-150)
                                         .clipped()
                                         .cornerRadius(30)
                                     Text("植物")
@@ -73,7 +72,7 @@ struct ContentView: View {
                                         .foregroundColor(.black)
                                         .padding(EdgeInsets(top: 0, leading: 125, bottom: 0, trailing: 125))
                                         .cornerRadius(10)
-                                        .padding(EdgeInsets(top: 610, leading: 15, bottom: 0, trailing: 15))
+                                        .padding(EdgeInsets(top: UIScreen.main.bounds.height-190, leading: 15, bottom: 0, trailing: 15))
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .top, endPoint: .bottom))
                                         .cornerRadius(30)
                                         .padding()
@@ -87,7 +86,7 @@ struct ContentView: View {
                                     Image("place")
                                         .resizable()
                                         .scaledToFill()
-                                        .frame(width: 350, height: 650)
+                                        .frame(width: 350, height: UIScreen.main.bounds.height-150)
                                         .clipped()
                                         .cornerRadius(30)
                                     Text("地圖")
@@ -96,7 +95,7 @@ struct ContentView: View {
                                         .foregroundColor(.black)
                                         .padding(EdgeInsets(top: 0, leading: 125, bottom: 0, trailing: 125))
                                         .cornerRadius(10)
-                                        .padding(EdgeInsets(top: 610, leading: 15, bottom: 0, trailing: 15))
+                                        .padding(EdgeInsets(top: UIScreen.main.bounds.height-190, leading: 15, bottom: 0, trailing: 15))
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .top, endPoint: .bottom))
                                         .cornerRadius(30)
                                         .padding()
@@ -105,8 +104,20 @@ struct ContentView: View {
 
                         }//HStack
                     }//scrollview
-                }//VStack
-            }//Scrollview
+                }//Scrollview
+            }   .navigationBarTitle("選取主題")//VStack
+                .toolbar(content: {
+                    ToolbarItem {
+                        NavigationLink {
+                            settings()
+                        } label: {
+                            Image(systemName: "gearshape")
+                                .font(.largeTitle)
+                                .foregroundColor(.blue)
+                                .offset(y: 50)
+                        }
+                    }
+                })
         }//navigationview
     }//var body: some view
 }
