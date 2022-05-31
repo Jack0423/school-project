@@ -15,20 +15,20 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                /*HStack {
+                HStack {
                     Text("選取主題")
                         .padding(.horizontal)
                         .font(.largeTitle.bold())
                     Spacer()
                     NavigationLink {
                         settings()
-                    } label: {
+                        } label: {
                         Image(systemName: "gearshape")
                             .padding(.horizontal)
                             .font(.largeTitle)
                             .foregroundColor(.blue)
-                    }
-                }*/
+                                }
+                        }
                 //Spacer()
                 ScrollView {
                     ScrollView(.horizontal, showsIndicators: false) {
@@ -105,7 +105,7 @@ struct ContentView: View {
                         }//HStack
                     }//scrollview
                 }//Scrollview
-            }   .navigationTitle("選取主題")//VStack
+            }   /*.navigationTitle("選取主題")//VStack
                 .navigationBarItems(
                     trailing: NavigationLink (
                         destination: settings()
@@ -115,7 +115,7 @@ struct ContentView: View {
                             .foregroundColor(.blue)
                             .offset(y: 50)
                     }
-                )
+                )*/
                 /*.toolbar(content: {
                     ToolbarItem {
                         NavigationLink {
