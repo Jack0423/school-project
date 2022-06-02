@@ -97,7 +97,6 @@ struct birdmod: View { //struct寫bird加一個數字
                         self.player.replaceCurrentItem(with: playerItem)
                         self.player.play()
                         self.player.volume = 5
-                        
                     } label: {
                         Text("播放")
                         Image(systemName: "play.circle")
@@ -150,7 +149,7 @@ struct birdmod: View { //struct寫bird加一個數字
                     
                 }.font(.system(size: 25, design: .rounded))
                     .foregroundColor(.black)
-                    .padding()
+                    //.padding()
                 
                 
                 DisclosureGroup("資料來源"){
