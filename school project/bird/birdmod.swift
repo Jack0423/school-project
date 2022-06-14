@@ -20,13 +20,9 @@ struct birdmod: View { //struct寫bird加一個數字
     let birdlink1 :String //連結1
     let birdlink2 :String //連結2
     let synthesizer = AVSpeechSynthesizer() //語音導覽
-    let player = AVPlayer() //鳥叫聲
     @State var voicestatus :Int = 0 //語音導覽狀態
-    /*
-     if global.voicestatus == 0{
-        synthesizer.stopSpeaking(at: AVSpeechBoundary.immediate)
-    }
-    */
+    let player = AVPlayer() //鳥叫聲
+    
     var body: some View {
         Spacer()
         ScrollView{
@@ -95,9 +91,9 @@ struct birdmod: View { //struct寫bird加一個數字
                     let playerItem = AVPlayerItem(url: fileUrl)
                     Button{
                         self.player.replaceCurrentItem(with: playerItem)
-                        self.player.play()
+                        self.player.seek(to: CMTime(seconds: 0, preferredTimescale: 1))
                         self.player.volume = 5
-                        
+                        self.player.play()
                     } label: {
                         Text("播放")
                         Image(systemName: "play.circle")
@@ -173,11 +169,3 @@ struct birdmod: View { //struct寫bird加一個數字
     }
 }
 
-/*
-struct birdmod_Previews: PreviewProvider {
-    static var previews: some View {
-        //這邊一樣bird加數字 bird加英文字母 與上面相同
-        birdmod(birdnumber: "2", birdname: birdname, birdname_: "黃嘴白鷺")
-    }
-}
-*/

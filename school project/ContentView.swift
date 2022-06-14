@@ -12,8 +12,12 @@ import SwiftUI
 
     
 struct ContentView: View {
+    
+    let imgheight = UIScreen.main.bounds.height -  (UIApplication.shared.statusBarFrame.size.height + 140)
+    
     var body: some View {
         NavigationView {
+            //let navigationBarHeight: CGFloat = self.navigationController!.navigationBar.frame.height
             VStack {
                 HStack {
                     Text("選取主題")
@@ -27,10 +31,10 @@ struct ContentView: View {
                             .padding(.horizontal)
                             .font(.largeTitle)
                             .foregroundColor(.blue)
-                                }
-                        }
+                    }
+                }
                 //Spacer()
-                ScrollView {
+                //ScrollView {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing:20){
                             NavigationLink{
@@ -40,7 +44,7 @@ struct ContentView: View {
                                     Image("bird")
                                         .resizable()
                                         .scaledToFill()
-                                        .frame(width: 350, height: UIScreen.main.bounds.height-160 )
+                                        .frame(width: 350, height: imgheight )
                                         .clipped()
                                         .cornerRadius(30)
                                     Text("水鳥")
@@ -49,7 +53,7 @@ struct ContentView: View {
                                         .foregroundColor(.black)
                                         .padding(EdgeInsets(top: 0, leading: 125, bottom: 0, trailing: 125))
                                         .cornerRadius(10)
-                                        .padding(EdgeInsets(top: UIScreen.main.bounds.height-200, leading: 15, bottom: 0, trailing: 15))
+                                        .padding(EdgeInsets(top: imgheight-40, leading: 15, bottom: 0, trailing: 15))
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .top, endPoint: .bottom))
                                         .cornerRadius(30)
                                         .padding()
@@ -63,7 +67,7 @@ struct ContentView: View {
                                     Image("plant")
                                         .resizable()
                                         .scaledToFill()
-                                        .frame(width: 350, height: UIScreen.main.bounds.height-160)
+                                        .frame(width: 350, height: imgheight)
                                         .clipped()
                                         .cornerRadius(30)
                                     Text("植物")
@@ -72,7 +76,7 @@ struct ContentView: View {
                                         .foregroundColor(.black)
                                         .padding(EdgeInsets(top: 0, leading: 125, bottom: 0, trailing: 125))
                                         .cornerRadius(10)
-                                        .padding(EdgeInsets(top: UIScreen.main.bounds.height-200, leading: 15, bottom: 0, trailing: 15))
+                                        .padding(EdgeInsets(top: imgheight-40, leading: 15, bottom: 0, trailing: 15))
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .top, endPoint: .bottom))
                                         .cornerRadius(30)
                                         .padding()
@@ -86,7 +90,7 @@ struct ContentView: View {
                                     Image("place")
                                         .resizable()
                                         .scaledToFill()
-                                        .frame(width: 350, height: UIScreen.main.bounds.height-160)
+                                        .frame(width: 350, height: imgheight)
                                         .clipped()
                                         .cornerRadius(30)
                                     Text("地圖")
@@ -95,7 +99,7 @@ struct ContentView: View {
                                         .foregroundColor(.black)
                                         .padding(EdgeInsets(top: 0, leading: 125, bottom: 0, trailing: 125))
                                         .cornerRadius(10)
-                                        .padding(EdgeInsets(top: UIScreen.main.bounds.height-200, leading: 15, bottom: 0, trailing: 15))
+                                        .padding(EdgeInsets(top: imgheight-40, leading: 15, bottom: 0, trailing: 15))
                                         .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .top, endPoint: .bottom))
                                         .cornerRadius(30)
                                         .padding()
@@ -103,9 +107,11 @@ struct ContentView: View {
                             }
 
                         }//HStack
-                    }//scrollview
-                }//Scrollview
-            }   /*.navigationTitle("選取主題")//VStack
+                    }.offset(y: -15)//scrollview
+                //}//Scrollview
+            }.navigationBarTitleDisplayMode(.inline)//VStack
+                /*
+                .navigationTitle("選取主題")
                 .navigationBarItems(
                     trailing: NavigationLink (
                         destination: settings()
