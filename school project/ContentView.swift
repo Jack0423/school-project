@@ -12,27 +12,51 @@ import SwiftUI
 
     
 struct ContentView: View {
-    
+   // @State private var navigateTo = ""
+   // @State private var isActive = false
     let imgheight = UIScreen.main.bounds.height -  (UIApplication.shared.statusBarFrame.size.height + 140)
     
     var body: some View {
         NavigationView {
             //let navigationBarHeight: CGFloat = self.navigationController!.navigationBar.frame.height
             VStack {
-                HStack {
-                    Text("選取主題")
-                        .padding(.horizontal)
-                        .font(.largeTitle.bold())
-                    Spacer()
-                    NavigationLink {
-                        settings()
-                        } label: {
-                        Image(systemName: "gearshape")
-                            .padding(.horizontal)
-                            .font(.largeTitle)
-                            .foregroundColor(.blue)
-                    }
-                }
+                    HStack {
+                        Text("選取主題")
+                            .padding()
+                            .font(.largeTitle.bold())
+                        Spacer()
+                       
+                                   /*Menu {
+                                       Button("item1") {
+                                           self.navigateTo = "test1"
+                                           self.isActive = true
+                                       }
+                                       Button("item2") {
+                                           self.navigateTo = "test2"
+                                           self.isActive = true
+                                       }
+                                   } label: {
+                                       Image(systemName: "gearshape")
+                                           .padding(.horizontal)
+                                           .font(.largeTitle)
+                                           .foregroundColor(.blue)
+                                   }
+                                   .background(
+                                       NavigationLink(destination: Text(self.navigateTo), isActive: $isActive) {
+                                           settings()
+                                       })*/
+                               
+                        NavigationLink {
+                            Text("23")
+                            } label: {
+                                
+                            Image(systemName: "gearshape")
+                                    .padding()
+                                .font(.largeTitle)
+                                .foregroundColor(.blue)
+                        }
+                    }.offset(y:10)
+                
                 //Spacer()
                 //ScrollView {
                     ScrollView(.horizontal, showsIndicators: false) {
@@ -109,7 +133,10 @@ struct ContentView: View {
                         }//HStack
                     }.offset(y: -15)//scrollview
                 //}//Scrollview
-            }.navigationBarTitleDisplayMode(.inline)//VStack
+            }.navigationBarHidden(true)
+            //.navigationBarTitleDisplayMode(.inline)
+                
+            //VStack
                 /*
                 .navigationTitle("選取主題")
                 .navigationBarItems(
@@ -139,17 +166,3 @@ struct ContentView: View {
 }
 
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-
-
-/*
-Button {
-    print("Edit button was tapped")
-} label: {
-    Image(systemName: "pencil")
-}
-*/

@@ -33,7 +33,6 @@ struct plant: View {
                 NavigationLink ("馬鞍藤", destination: plant8(planth:"馬鞍藤"))
                 NavigationLink ("林投", destination: plant9(planti:"林投"))
                 NavigationLink ("團扇仙人掌", destination: plant10(plantj:"團扇仙人掌"))
-                NavigationLink ("test", destination: planttest(plantx:"test"))
             }
         }   .background(Color(UIColor.secondarySystemBackground))
             .navigationTitle("植物")

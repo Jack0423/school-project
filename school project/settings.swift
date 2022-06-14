@@ -8,10 +8,16 @@
 import SwiftUI
 
 struct settings: View {
-    @State var navigateTo: AnyView?
-    @State var isNavigationActive = false
+
+    /*@State var navigateTo: AnyView?
+    @State var isNavigationActive = false*/
     var body: some View {
-        Spacer()
+        Image(systemName: "gearshape")
+            .padding(.horizontal)
+            .font(.largeTitle)
+            .foregroundColor(.blue)
+        //Text("bruh")
+        /*Spacer()
         Menu {
             Button {
                 navigateTo = AnyView(birdmenu())
@@ -28,7 +34,7 @@ struct settings: View {
             }
         } label: {
             Label("Add", systemImage: "plus")
-        }
+        }*/
     }
 }
 
