@@ -18,7 +18,6 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            //let navigationBarHeight: CGFloat = self.navigationController!.navigationBar.frame.height
             VStack {
                     HStack {
                         Text("選取主題")
