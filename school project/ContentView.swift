@@ -50,7 +50,7 @@ struct ContentView: View {
                             } label: {
                                 
                             Image(systemName: "gearshape")
-                                    .padding()
+                                .padding()
                                 .font(.largeTitle)
                                 .foregroundColor(.blue)
                         }

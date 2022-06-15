@@ -38,7 +38,7 @@ struct bruh: View {
         var coordinate: CLLocationCoordinate2D
     }
     private var annotationItems = [
-        AnnotatedItem(name: "廁所", coordinate: .init(latitude: 24.810323803153736, longitude: 120.91245398450795)),
+        AnnotatedItem(name: "廁所", coordinate: .init(latitude: 24.810323, longitude: 120.912453)),
         AnnotatedItem(name: "抽水站", coordinate: .init(latitude: 24.809989, longitude: 120.911562)),
         AnnotatedItem(name: "Empire State Building", coordinate: .init(latitude: 40.748817, longitude: -73.985428))
         ]
@@ -57,9 +57,9 @@ struct bruh: View {
                 Spacer()
                 // 4
                 Picker("", selection: $mapType) {
-                    Text("Hybrid").tag(MKMapType.hybrid)
-                    Text("Standard").tag(MKMapType.standard)
-                    Text("Satellite").tag(MKMapType.satellite)
+                    Text("混合地圖").tag(MKMapType.hybrid)
+                    Text("標準地圖").tag(MKMapType.standard)
+                    Text("衛星地圖").tag(MKMapType.satellite)
                 }.pickerStyle(SegmentedPickerStyle())
                     .offset(y: -40)
                     .font(.largeTitle)

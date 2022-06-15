@@ -27,6 +27,7 @@
 		04DBB3EB27E0343E00288D64 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DBB3EA27E0343E00288D64 /* ContentView.swift */; };
 		04DBB3ED27E0343F00288D64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DBB3EC27E0343F00288D64 /* Assets.xcassets */; };
 		04DBB3F027E0343F00288D64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DBB3EF27E0343F00288D64 /* Preview Assets.xcassets */; };
+		71147C95285A1F8500881196 /* mapview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71147C94285A1F8500881196 /* mapview.swift */; };
 		713789E1283F35B7009F9861 /* birdmod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713789DF283F35B6009F9861 /* birdmod.swift */; };
 		713789E2283F35B7009F9861 /* birdmenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713789E0283F35B6009F9861 /* birdmenu.swift */; };
 		713789F6283F35FB009F9861 /* 5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 713789E3283F35F3009F9861 /* 5.mp3 */; };
@@ -72,6 +73,7 @@
 		04DBB3EA27E0343E00288D64 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		04DBB3EC27E0343F00288D64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04DBB3EF27E0343F00288D64 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		71147C94285A1F8500881196 /* mapview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapview.swift; sourceTree = "<group>"; };
 		713789DF283F35B6009F9861 /* birdmod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = birdmod.swift; sourceTree = "<group>"; };
 		713789E0283F35B6009F9861 /* birdmenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = birdmenu.swift; sourceTree = "<group>"; };
 		713789E3283F35F3009F9861 /* 5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 5.mp3; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				0437172727E9FD00008E7AD4 /* PlaceView.swift */,
 				0437171D27E97D57008E7AD4 /* place.swift */,
 				04866EC727EF377B00F7552F /* bruh.swift */,
+				71147C94285A1F8500881196 /* mapview.swift */,
 			);
 			path = place;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71147C95285A1F8500881196 /* mapview.swift in Sources */,
 				04866EC227EDFFA900F7552F /* plant9.swift in Sources */,
 				04866EBE27EDFE2C00F7552F /* plant7.swift in Sources */,
 				04866EB427EDFDE400F7552F /* plant2.swift in Sources */,
