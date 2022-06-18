@@ -12,8 +12,8 @@ import SwiftUI
 
     
 struct ContentView: View {
-   // @State private var navigateTo = ""
-   // @State private var isActive = false
+    @State private var navigateTo: AnyView?
+    @State private var isNavigaionActive = false
     let imgheight = UIScreen.main.bounds.height -  (UIApplication.shared.statusBarFrame.size.height + 140)
     
     var body: some View {
@@ -24,27 +24,40 @@ struct ContentView: View {
                             .padding()
                             .font(.largeTitle.bold())
                         Spacer()
-                       
-                                   /*Menu {
-                                       Button("item1") {
-                                           self.navigateTo = "test1"
-                                           self.isActive = true
-                                       }
-                                       Button("item2") {
-                                           self.navigateTo = "test2"
-                                           self.isActive = true
-                                       }
-                                   } label: {
-                                       Image(systemName: "gearshape")
-                                           .padding(.horizontal)
-                                           .font(.largeTitle)
-                                           .foregroundColor(.blue)
-                                   }
-                                   .background(
-                                       NavigationLink(destination: Text(self.navigateTo), isActive: $isActive) {
-                                           settings()
-                                       })*/
-                               
+                        
+                        Menu {
+                           Button {
+                               navigateTo = AnyView(information())
+                               isNavigaionActive = true
+                           } label: {
+                               Image(systemName: "info.circle")
+                                   .padding(.horizontal)
+                                   .font(.largeTitle)
+                                   .foregroundColor(.black)
+                               Text("關於APP")
+                           }
+                           Button {
+                               navigateTo = AnyView(feedback())
+                               isNavigaionActive = true
+                           } label: {
+                               Image(systemName: "square.and.pencil.circle")
+                                   .padding(.horizontal)
+                                   .font(.largeTitle)
+                                   .foregroundColor(.black)
+                               Text("意見回饋")
+                           }
+                        } label: {
+                           Image(systemName: "list.bullet")
+                               .padding(.horizontal)
+                               .font(.largeTitle)
+                               .foregroundColor(.blue)
+                        }   /*.background(/Volumes/SFSymbols/SF Symbols.pkg
+                                NavigationLink(destination: Text(self.navigateTo), isActive: $isActive) {
+                                    EmptyView()
+                                }
+                            )*/
+                        
+                        /*
                         NavigationLink {
                             Text("23")
                             } label: {
@@ -54,9 +67,10 @@ struct ContentView: View {
                                 .font(.largeTitle)
                                 .foregroundColor(.blue)
                         }
+                        */
+                        
                     }.offset(y:10)
                 
-                //Spacer()
                 //ScrollView {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing:20){
