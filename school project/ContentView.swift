@@ -20,85 +20,106 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                    HStack {
-                        Text("選取主題")
-                            .padding()
-                            .font(.largeTitle.bold())
-                        Spacer()
-                        
-                        
-                        Menu {
-                           Button {
-                               navigateTo = AnyView(birdmenu())
-                               isNavigaionActive = true
-                           } label: {
-                               
-                               Image(systemName: "info.circle")
-                                   .foregroundColor(.black)
-                               Spacer()
-                               Text("關於APP")
-                           }
-                            Link(destination: URL(string: "https://docs.google.com/forms/d/1PeDNUt6CZg_WQDCljMqgLTjQUi407pgzN1qz_n6GZPg/edit")!, label: {
-                                Image(systemName: "square.and.pencil")
+                HStack {
+                    Text("選取主題")
+                        .padding()
+                        .font(.largeTitle.bold())
+                    Spacer()
+                    Menu {
+                        Link(destination: URL(string: "https://docs.google.com/forms/d/1PeDNUt6CZg_WQDCljMqgLTjQUi407pgzN1qz_n6GZPg/edit")!, label: {
+                            Image(systemName: "square.and.pencil")
+                                .foregroundColor(.black)
+                            Spacer()
+                            Text("意見回饋")
+                        })
+
+                        /*Button(action: {}) {
+                            NavigationLink(destination: information()){
+                                    HStack{
+                                        Image(systemName: "info.circle")
+                                            .foregroundColor(.black)
+                                        Spacer()
+                                        Text("關於APP")
+                                    }
+                                }
+                        }*/
+                        NavigationLink{
+                            information()
+                        }label: {
+                            HStack{
+                                Image(systemName: "info.circle")
                                     .foregroundColor(.black)
                                 Spacer()
-                                Text("意見回饋")
-                            })
-                           /*Button {
-                               navigateTo = AnyView(feedback())
-                               isNavigaionActive = true
-                           } label: {
-                               Image(systemName: "square.and.pencil.circle")
-                                   .foregroundColor(.black)
-                               Spacer()
-                               Text("意見回饋")
-                           }*/
-                        } label: {
-                           Image(systemName: "list.bullet")
-                               .padding()
-                               .font(.largeTitle)
-                               .foregroundColor(.blue)
+                                Text("關於APP")
+                            }
                         }
+                                                
+                                                
                         /*
-                        Menu {
-                           Button {
-                               self.navigateTo = "birdmenu()"
-                               isNavigaionActive = true
-                           } label: {
-                               
-                               Image(systemName: "info.circle")
-                                   .foregroundColor(.black)
-                               Spacer()
-                               Text("關於APP")
-                           }
-                           Button {
-                               self.navigateTo = "feedback()"
-                               isNavigaionActive = true
-                           } label: {
-                               Image(systemName: "square.and.pencil.circle")
-                                   .foregroundColor(.black)
-                               Spacer()
-                               Text("意見回饋")
-                           }
+                        Button {
+                           navigateTo = AnyView(birdmenu())
                         } label: {
-                           Image(systemName: "list.bullet")
-                               .padding()
-                               .font(.largeTitle)
-                               .foregroundColor(.blue)
-                        }   .background(
-                                NavigationLink(destination: self.navigateTo, isActive: $isNavigaionActive) {
-                                    EmptyView()
-                                }
-                            )
+                            HStack{
+                                Image(systemName: "info.circle")
+                                    .foregroundColor(.black)
+                                Spacer()
+                                Text("關於APP")
+                            }
+                        }
+                        Link(destination: URL(string: "https://docs.google.com/forms/d/1PeDNUt6CZg_WQDCljMqgLTjQUi407pgzN1qz_n6GZPg/edit")!, label: {
+                            Image(systemName: "square.and.pencil")
+                                .foregroundColor(.black)
+                            Spacer()
+                            Text("意見回饋")
+                        })
                         */
-                        
-                    }.offset(y:10)
+                    } label: {
+                       Image(systemName: "list.bullet")
+                           .padding()
+                           .font(.largeTitle)
+                           .foregroundColor(.blue)
+                    }
+                    /*
+                    Menu {
+                       Button {
+                           self.navigateTo = "birdmenu()"
+                           isNavigaionActive = true
+                       } label: {
+                           
+                           Image(systemName: "info.circle")
+                               .foregroundColor(.black)
+                           Spacer()
+                           Text("關於APP")
+                       }
+                       Button {
+                           self.navigateTo = "feedback()"
+                           isNavigaionActive = true
+                       } label: {
+                           Image(systemName: "square.and.pencil.circle")
+                               .foregroundColor(.black)
+                           Spacer()
+                           Text("意見回饋")
+                       }
+                    } label: {
+                       Image(systemName: "list.bullet")
+                           .padding()
+                           .font(.largeTitle)
+                           .foregroundColor(.blue)
+                    }   .background(
+                            NavigationLink(destination: self.navigateTo, isActive: $isNavigaionActive) {
+                                EmptyView()
+                            }
+                        )
+                    */
+                    
+                }.offset(y:20)
                 
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing:20){
                         NavigationLink{
-                            birdmenu()
+                            //birdmenu()
+                            information()
                         }label: {
                             ZStack{
                                 Image("bird")
