@@ -38,7 +38,13 @@ struct ContentView: View {
                                Spacer()
                                Text("關於APP")
                            }
-                           Button {
+                            Link(destination: URL(string: "https://docs.google.com/forms/d/1PeDNUt6CZg_WQDCljMqgLTjQUi407pgzN1qz_n6GZPg/edit")!, label: {
+                                Image(systemName: "square.and.pencil")
+                                    .foregroundColor(.black)
+                                Spacer()
+                                Text("意見回饋")
+                            })
+                           /*Button {
                                navigateTo = AnyView(feedback())
                                isNavigaionActive = true
                            } label: {
@@ -46,7 +52,7 @@ struct ContentView: View {
                                    .foregroundColor(.black)
                                Spacer()
                                Text("意見回饋")
-                           }
+                           }*/
                         } label: {
                            Image(systemName: "list.bullet")
                                .padding()
