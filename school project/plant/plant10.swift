@@ -10,6 +10,8 @@ import AVFoundation
 
 struct plant10: View {
     var plantj: String
+    let synthesizer = AVSpeechSynthesizer() //語音導覽
+    @State var voicestatus :Int = 0 //語音導覽狀態
     var body: some View {
         Spacer()
         ScrollView{
@@ -25,15 +27,42 @@ struct plant10: View {
                         .foregroundColor(.gray)
                 }
                 DisclosureGroup("語音導覽"){
-                    Button {
-                        let utterance = AVSpeechUtterance(string: "團扇仙人掌:::::::仙人掌科::::是製作澎湖特產仙人掌冰的材料::::葉::特化成針刺狀::::莖::綠色肉質扁平::::花::黃色::::具多數雄蕊::::果實::漿果::::成熟時紫色")
-                        utterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
-                        utterance.rate = 0.4
-                        let synthesizer = AVSpeechSynthesizer()
-                        synthesizer.speak(utterance)
-                    } label: {
-                        Text("播放")
-                        Image(systemName: "play.circle")
+                    HStack{
+                        if voicestatus == 0 {
+                            Button{
+                                let utterance = AVSpeechUtterance(string: "團扇仙人掌:::::::仙人掌科::::是製作澎湖特產仙人掌冰的材料::::葉::特化成針刺狀::::莖::綠色肉質扁平::::花::黃色::::具多數雄蕊::::果實::漿果::::成熟時紫色")
+                                utterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
+                                utterance.rate = 0.4
+                                synthesizer.speak(utterance)
+                                voicestatus = 1
+                            } label: {
+                                Text("播放")
+                                Image(systemName: "play.circle")
+                            }
+                        }else if voicestatus == 1 {
+                            Button{
+                                synthesizer.pauseSpeaking(at: AVSpeechBoundary.immediate)
+                                voicestatus = 2
+                            } label: {
+                                Text("暫停")
+                                Image(systemName: "pause.circle")
+                            }
+                        }else if voicestatus == 2{
+                            Button{
+                                synthesizer.continueSpeaking()
+                                voicestatus = 1
+                            } label: {
+                                Text("繼續")
+                                Image(systemName: "play.circle")
+                            }
+                        }
+                        Button{
+                            synthesizer.stopSpeaking(at: AVSpeechBoundary.immediate)
+                            voicestatus = 0;
+                        } label: {
+                            Text("  停止")
+                            Image(systemName: "stop.circle")
+                        }
                     }
                 }.font(.system(size: 25, design: .rounded))
                     .foregroundColor(.black).padding()

@@ -10,6 +10,8 @@ import AVFoundation
 
 struct plant6: View {
     var plantf: String
+    let synthesizer = AVSpeechSynthesizer() //語音導覽
+    @State var voicestatus :Int = 0 //語音導覽狀態
     var body: some View {
         Spacer()
         ScrollView{
@@ -25,15 +27,42 @@ struct plant6: View {
                         .foregroundColor(.gray)
                 }
                 DisclosureGroup("語音導覽"){
-                    Button {
-                        let utterance = AVSpeechUtterance(string: "海檬果:::::::夾竹桃科:::: 果實形似芒果::::典型的海漂植物::::葉::全緣::::叢生於枝端::::具白色乳汁::::花::白色::::長漏斗型::::先端五裂::::花瓣中心淡紅色::::有毛::::果實::含豐富纖維質::::成熟時紅色::::全株有毒::::誤食會有嘔吐::::呼吸困難::::甚至致命之虞")
-                        utterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
-                        utterance.rate = 0.4
-                        let synthesizer = AVSpeechSynthesizer()
-                        synthesizer.speak(utterance)
-                    } label: {
-                        Text("播放")
-                        Image(systemName: "play.circle")
+                    HStack{
+                        if voicestatus == 0 {
+                            Button{
+                                let utterance = AVSpeechUtterance(string: "海檬果:::::::夾竹桃科:::: 果實形似芒果::::典型的海漂植物::::葉::全緣::::叢生於枝端::::具白色乳汁::::花::白色::::長漏斗型::::先端五裂::::花瓣中心淡紅色::::有毛::::果實::含豐富纖維質::::成熟時紅色::::全株有毒::::誤食會有嘔吐::::呼吸困難::::甚至致命之虞")
+                                utterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
+                                utterance.rate = 0.4
+                                synthesizer.speak(utterance)
+                                voicestatus = 1
+                            } label: {
+                                Text("播放")
+                                Image(systemName: "play.circle")
+                            }
+                        }else if voicestatus == 1 {
+                            Button{
+                                synthesizer.pauseSpeaking(at: AVSpeechBoundary.immediate)
+                                voicestatus = 2
+                            } label: {
+                                Text("暫停")
+                                Image(systemName: "pause.circle")
+                            }
+                        }else if voicestatus == 2{
+                            Button{
+                                synthesizer.continueSpeaking()
+                                voicestatus = 1
+                            } label: {
+                                Text("繼續")
+                                Image(systemName: "play.circle")
+                            }
+                        }
+                        Button{
+                            synthesizer.stopSpeaking(at: AVSpeechBoundary.immediate)
+                            voicestatus = 0;
+                        } label: {
+                            Text("  停止")
+                            Image(systemName: "stop.circle")
+                        }
                     }
                 }.font(.system(size: 25, design: .rounded))
                     .foregroundColor(.black).padding()
