@@ -17,6 +17,7 @@ struct ContentView: View {
     @State private var isNavigaionActive = false
     let imgheight = UIScreen.main.bounds.height -  (UIApplication.shared.statusBarFrame.size.height + 140)
     
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -118,8 +119,7 @@ struct ContentView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing:20){
                         NavigationLink{
-                            //birdmenu()
-                            information()
+                            birdmenu()
                         }label: {
                             ZStack{
                                 Image("bird")
