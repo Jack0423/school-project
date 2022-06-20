@@ -15,24 +15,44 @@ struct ContentView: View {
     @State private var navigateTo: AnyView?
     //@State private var navigateTo :String
     @State private var isNavigaionActive = false
+    //@State private var isActive = false
     let imgheight = UIScreen.main.bounds.height -  (UIApplication.shared.statusBarFrame.size.height + 140)
-    
     var body: some View {
         NavigationView {
             VStack {
                 HStack {
+                    
                     Text("選取主題")
                         .padding()
                         .font(.largeTitle.bold())
                     Spacer()
                     Menu {
+                        Button {
+                            navigateTo = AnyView(information())
+                            isNavigaionActive = true
+                                    } label: {
+                                Label("Create an Item", systemImage: "doc")
+                                                }
                         Link(destination: URL(string: "https://docs.google.com/forms/d/1PeDNUt6CZg_WQDCljMqgLTjQUi407pgzN1qz_n6GZPg/edit")!, label: {
                             Image(systemName: "square.and.pencil")
                                 .foregroundColor(.black)
                             Spacer()
                             Text("意見回饋")
                         })
-
+                       
+                        /*NavigationLink{
+                            information()
+                        }label: {
+                            Image(systemName: "info.circle")
+                                .foregroundColor(.black)
+                            Spacer()
+                            Text("關於APP")
+                        }*/
+                       
+                        /*Button("item1") {
+                                            self.navigateTo = "test1"
+                                            self.isActive = true
+                                        }*/
                         /*Button(action: {}) {
                             NavigationLink(destination: information()){
                                     HStack{
@@ -43,7 +63,7 @@ struct ContentView: View {
                                     }
                                 }
                         }*/
-                        NavigationLink{
+                        /*NavigationLink{
                             information()
                         }label: {
                             HStack{
@@ -52,7 +72,7 @@ struct ContentView: View {
                                 Spacer()
                                 Text("關於APP")
                             }
-                        }
+                        }*/
                                                 
                                                 
                         /*
@@ -79,6 +99,7 @@ struct ContentView: View {
                            .font(.largeTitle)
                            .foregroundColor(.blue)
                     }
+                    
                     /*
                     Menu {
                        Button {
@@ -118,8 +139,8 @@ struct ContentView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing:20){
                         NavigationLink{
-                            //birdmenu()
-                            information()
+                            birdmenu()
+                            //information()
                         }label: {
                             ZStack{
                                 Image("bird")
