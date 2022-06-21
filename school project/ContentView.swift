@@ -12,9 +12,12 @@ import SwiftUI
 
     
 struct ContentView: View {
-    @State private var navigateTo: AnyView?
+    let info : String = "製作人：王凱立、李泫翰\n\n如有任何版權問題\n請使用意見回饋或下方的email告訴我們\njack940423@gmail.com\nray0306.lee@gmail.com"
+
+    @State private var navigateTo=""
     //@State private var navigateTo :String
-    @State private var isNavigaionActive = false
+    @State private var isNavigationActive = false
+    @State private var isActive = false
     let imgheight = UIScreen.main.bounds.height -  (UIApplication.shared.statusBarFrame.size.height + 140)
     
     
@@ -22,18 +25,38 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 HStack {
+                    
                     Text("選取主題")
                         .padding()
                         .font(.largeTitle.bold())
                     Spacer()
                     Menu {
+                        Button {
+                            navigateTo = info
+                            isActive = true
+                                    } label: {
+                                Label("關於APP", systemImage: "info.circle")
+                                                }
                         Link(destination: URL(string: "https://docs.google.com/forms/d/1PeDNUt6CZg_WQDCljMqgLTjQUi407pgzN1qz_n6GZPg/edit")!, label: {
                             Image(systemName: "square.and.pencil")
                                 .foregroundColor(.black)
                             Spacer()
                             Text("意見回饋")
                         })
-
+                       
+                        /*NavigationLink{
+                            information()
+                        }label: {
+                            Image(systemName: "info.circle")
+                                .foregroundColor(.black)
+                            Spacer()
+                            Text("關於APP")
+                        }*/
+                       
+                        /*Button("item1") {
+                                            self.navigateTo = "test1"
+                                            self.isActive = true
+                                        }*/
                         /*Button(action: {}) {
                             NavigationLink(destination: information()){
                                     HStack{
@@ -44,7 +67,7 @@ struct ContentView: View {
                                     }
                                 }
                         }*/
-                        NavigationLink{
+                        /*NavigationLink{
                             information()
                         }label: {
                             HStack{
@@ -53,7 +76,7 @@ struct ContentView: View {
                                 Spacer()
                                 Text("關於APP")
                             }
-                        }
+                        }*/
                                                 
                                                 
                         /*
@@ -79,7 +102,11 @@ struct ContentView: View {
                            .padding()
                            .font(.largeTitle)
                            .foregroundColor(.blue)
-                    }
+                    }.background(
+                        NavigationLink(destination: information()/*Text(self.navigateTo)*/, isActive: $isActive) {
+                            EmptyView()
+                        })
+                    
                     /*
                     Menu {
                        Button {
@@ -120,6 +147,7 @@ struct ContentView: View {
                     HStack(spacing:20){
                         NavigationLink{
                             birdmenu()
+                            //information()
                         }label: {
                             ZStack{
                                 Image("bird")
