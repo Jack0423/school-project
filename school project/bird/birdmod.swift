@@ -15,6 +15,7 @@ struct birdmod: View { //struct寫bird加一個數字
     let birdnumber :String //鳥的號碼
     let birdname :String //鳥類名稱
     let birdname_ :String //鳥類別名
+    let birdscientific :String //鳥類學名
     let birdinfo :String //鳥類資料
     let birdimg :String //圖片數量
     let birdlink1 :String //連結1
@@ -41,6 +42,11 @@ struct birdmod: View { //struct寫bird加一個數字
                     }
                 }
                 
+                Text(birdscientific)
+                    .foregroundColor(.black)
+                    .font(.system(size: 20, design: .rounded))
+                    .fontWeight(.bold)
+                    .padding()
                 
                 DisclosureGroup("語音導覽"){
                     HStack{

@@ -147,7 +147,6 @@ struct ContentView: View {
                     HStack(spacing:20){
                         NavigationLink{
                             birdmenu()
-                            //information()
                         }label: {
                             ZStack{
                                 Image("bird")
