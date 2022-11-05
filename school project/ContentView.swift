@@ -16,9 +16,10 @@ struct ContentView: View {
 
     @State private var navigateTo=""
     //@State private var navigateTo :String
-    @State private var isNavigationActive = false
+    @State private var isNavigationActive = true
     @State private var isActive = false
     let imgheight = UIScreen.main.bounds.height -  (UIApplication.shared.statusBarFrame.size.height + 140)
+    let imgweight = UIScreen.main.bounds.width - 50
     
     
     var body: some View {
@@ -143,7 +144,7 @@ struct ContentView: View {
                 }.offset(y:20)
                 
                 
-                ScrollView(.horizontal, showsIndicators: false) {
+                ScrollView(.horizontal, showsIndicators: true) {
                     HStack(spacing:20){
                         NavigationLink{
                             birdmenu()
@@ -152,14 +153,14 @@ struct ContentView: View {
                                 Image("bird")
                                     .resizable()
                                     .scaledToFill()
-                                    .frame(width: 350, height: imgheight )
+                                    .frame(width: imgweight, height: imgheight )
                                     .clipped()
                                     .cornerRadius(30)
                                 Text("水鳥")
                                     .fontWeight(.bold)
                                     .font(.system(size: 35, design: .rounded))
                                     .foregroundColor(.black)
-                                    .padding(EdgeInsets(top: 0, leading: 125, bottom: 0, trailing: 125))
+                                    .padding(EdgeInsets(top: 0, leading: imgweight * 0.5 - 50, bottom: 0, trailing: imgweight * 0.5 - 50))
                                     .cornerRadius(10)
                                     .padding(EdgeInsets(top: imgheight-40, leading: 15, bottom: 0, trailing: 15))
                                     .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .top, endPoint: .bottom))
@@ -175,14 +176,14 @@ struct ContentView: View {
                                 Image("plant")
                                     .resizable()
                                     .scaledToFill()
-                                    .frame(width: 350, height: imgheight)
+                                    .frame(width: imgweight, height: imgheight)
                                     .clipped()
                                     .cornerRadius(30)
                                 Text("植物")
                                     .fontWeight(.bold)
                                     .font(.system(size: 35, design: .rounded))
                                     .foregroundColor(.black)
-                                    .padding(EdgeInsets(top: 0, leading: 125, bottom: 0, trailing: 125))
+                                    .padding(EdgeInsets(top: 0, leading: imgweight * 0.5 - 50, bottom: 0, trailing: imgweight * 0.5 - 50))
                                     .cornerRadius(10)
                                     .padding(EdgeInsets(top: imgheight-40, leading: 15, bottom: 0, trailing: 15))
                                     .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .top, endPoint: .bottom))
@@ -198,14 +199,14 @@ struct ContentView: View {
                                 Image("place")
                                     .resizable()
                                     .scaledToFill()
-                                    .frame(width: 350, height: imgheight)
+                                    .frame(width: imgweight, height: imgheight)
                                     .clipped()
                                     .cornerRadius(30)
                                 Text("地圖")
                                     .fontWeight(.bold)
                                     .font(.system(size: 35, design: .rounded))
                                     .foregroundColor(.black)
-                                    .padding(EdgeInsets(top: 0, leading: 125, bottom: 0, trailing: 125))
+                                    .padding(EdgeInsets(top: 0, leading: imgweight * 0.5 - 50, bottom: 0, trailing: imgweight * 0.5 - 50))
                                     .cornerRadius(10)
                                     .padding(EdgeInsets(top: imgheight-40, leading: 15, bottom: 0, trailing: 15))
                                     .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .top, endPoint: .bottom))
