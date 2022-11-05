@@ -16,7 +16,7 @@ struct ContentView: View {
 
     @State private var navigateTo=""
     //@State private var navigateTo :String
-    @State private var isNavigationActive = true
+    @State private var isNavigationActive = false
     @State private var isActive = false
     let imgheight = UIScreen.main.bounds.height -  (UIApplication.shared.statusBarFrame.size.height + 140)
     let imgweight = UIScreen.main.bounds.width - 50
