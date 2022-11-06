@@ -127,28 +127,6 @@ struct birdmod: View { //struct寫bird加一個數字
                             .frame(width: UIScreen.main.bounds.width-25)
                         Spacer(minLength: 25)
                     }
-                    /*
-                    Image(birdnumber + "-1")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: UIScreen.main.bounds.width)
-                    Spacer(minLength: 25)
-                    Image(birdnumber + "-2")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: UIScreen.main.bounds.width)
-                    Spacer(minLength: 25)
-                    Image(birdnumber + "-3")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: UIScreen.main.bounds.width)
-                    Spacer(minLength: 25)
-                    Image(birdnumber + "-4")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: UIScreen.main.bounds.width)
-                    Spacer(minLength: 25)
-                    */
                     
                 }.font(.system(size: 25, design: .rounded))
                     .foregroundColor(.black)
