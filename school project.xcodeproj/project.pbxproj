@@ -437,7 +437,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"school project/Preview Content\"";
-				DEVELOPMENT_TEAM = PH6YZ5Y4U2;
+				DEVELOPMENT_TEAM = 6945DHJ2ZN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -450,7 +450,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Jack.school-project";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.edu.hc.cksh;
 				PRODUCT_NAME = "金城湖導覽";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -466,7 +466,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"school project/Preview Content\"";
-				DEVELOPMENT_TEAM = Y7U3AT9H53;
+				DEVELOPMENT_TEAM = 6945DHJ2ZN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -479,7 +479,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Jack.school-project";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.edu.hc.cksh;
 				PRODUCT_NAME = "金城湖導覽";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

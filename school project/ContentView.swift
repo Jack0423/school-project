@@ -19,7 +19,7 @@ struct ContentView: View {
     @State private var isNavigationActive = false
     @State private var isActive = false
     let imgheight = UIScreen.main.bounds.height -  (UIApplication.shared.statusBarFrame.size.height + 140)
-    let imgweight = UIScreen.main.bounds.width - 50
+    let imgweight = UIScreen.main.bounds.width - 80
     
     
     var body: some View {
@@ -38,7 +38,7 @@ struct ContentView: View {
                                     } label: {
                                 Label("關於APP", systemImage: "info.circle")
                                                 }
-                        Link(destination: URL(string: "https://docs.google.com/forms/d/1PeDNUt6CZg_WQDCljMqgLTjQUi407pgzN1qz_n6GZPg/edit")!, label: {
+                        Link(destination: URL(string: "https://forms.gle/oKtJwC7W7ibwUrDA8")!, label: {
                             Image(systemName: "square.and.pencil")
                                 .foregroundColor(.black)
                             Spacer()
