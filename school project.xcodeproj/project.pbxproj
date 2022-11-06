@@ -64,7 +64,7 @@
 		04866EC127EDFFA900F7552F /* plant9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plant9.swift; sourceTree = "<group>"; };
 		04866EC327EDFFB700F7552F /* plant10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plant10.swift; sourceTree = "<group>"; };
 		04866EC727EF377B00F7552F /* bruh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bruh.swift; sourceTree = "<group>"; };
-		04DBB3E527E0343E00288D64 /* 金城湖導覽.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "金城湖導覽.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04DBB3E527E0343E00288D64 /* 金城湖之生態導覽.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "金城湖之生態導覽.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DBB3E827E0343E00288D64 /* school_projectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = school_projectApp.swift; sourceTree = "<group>"; };
 		04DBB3EA27E0343E00288D64 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		04DBB3EC27E0343F00288D64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 		04DBB3E627E0343E00288D64 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04DBB3E527E0343E00288D64 /* 金城湖導覽.app */,
+				04DBB3E527E0343E00288D64 /* 金城湖之生態導覽.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,7 +216,7 @@
 			);
 			name = "school project";
 			productName = "school project";
-			productReference = 04DBB3E527E0343E00288D64 /* 金城湖導覽.app */;
+			productReference = 04DBB3E527E0343E00288D64 /* 金城湖之生態導覽.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -451,7 +451,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Jack1.school-project";
-				PRODUCT_NAME = "金城湖導覽";
+				PRODUCT_NAME = "金城湖之生態導覽";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -480,7 +480,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Jack1.school-project";
-				PRODUCT_NAME = "金城湖導覽";
+				PRODUCT_NAME = "金城湖之生態導覽";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
