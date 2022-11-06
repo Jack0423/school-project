@@ -142,6 +142,7 @@ struct ContentView: View {
                     */
                     
                 }.offset(y:20)
+                    
                 
                 
                 ScrollView(.horizontal, showsIndicators: true) {
@@ -219,5 +220,6 @@ struct ContentView: View {
                 }.offset(y: -15)//scrollview
             }.navigationBarHidden(true)//VSyack
         }//navigationview
+        .navigationViewStyle(StackNavigationViewStyle())
     }//var body: some view
 }
