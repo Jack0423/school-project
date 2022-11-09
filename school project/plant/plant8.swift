@@ -18,7 +18,7 @@ struct plant8: View {
             VStack{
                 HStack{
                     Text("馬鞍藤")
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                         .font(.system(.largeTitle, design: .rounded))
                         .fontWeight(.bold)
                         .padding()
@@ -65,7 +65,7 @@ struct plant8: View {
                         }
                     }
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                   .padding()
 
                 //植物介紹
                 DisclosureGroup("葉"){
@@ -74,7 +74,7 @@ struct plant8: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                 DisclosureGroup("花"){
                     Text("花瓣依逆時針方向旋轉開放，清晨盛開，午後及凋零。雄蕊五枚，三長兩短。")
@@ -82,7 +82,7 @@ struct plant8: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                 DisclosureGroup("果"){
                     Text("蒴果四裂。")
@@ -90,7 +90,7 @@ struct plant8: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                 DisclosureGroup("莖"){
                     Text("匍匐成長，節節生根。")
@@ -98,7 +98,7 @@ struct plant8: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
                         
 
                 Image("馬鞍藤樹")
@@ -106,7 +106,7 @@ struct plant8: View {
                     .scaledToFit()
                 
             }
-        }
+        }.foregroundColor(.primary)
     }
 }
 

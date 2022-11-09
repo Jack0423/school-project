@@ -18,7 +18,7 @@ struct plant4: View {
             VStack{
                 HStack{
                     Text("銀合歡")
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                         .font(.system(.largeTitle, design: .rounded))
                         .fontWeight(.bold)
                         .padding()
@@ -65,7 +65,7 @@ struct plant4: View {
                         }
                     }
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
                 
                 //植物介紹
                 DisclosureGroup("葉"){
@@ -74,7 +74,7 @@ struct plant4: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                 DisclosureGroup("花"){
                     Text("頭狀花序，腋生，具長柄，花白色。每一朵小花都含雌雄蕊，授粉成功即形成豆莢。")
@@ -82,7 +82,7 @@ struct plant4: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                 DisclosureGroup("果"){
                     Text("")
@@ -90,12 +90,12 @@ struct plant4: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                 DisclosureGroup("相關知識"){
                     Text("外來植物，引進作為炭薪及造紙使用。")
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
                         
 
                 Image("銀合歡樹")
@@ -103,7 +103,7 @@ struct plant4: View {
                     .scaledToFit()
             
             }
-        }
+        } .foregroundColor(.primary)
     }
 }
 

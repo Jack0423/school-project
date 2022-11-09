@@ -18,7 +18,7 @@ struct plant7: View {
             VStack{
                 HStack{
                     Text("水筆仔")
-                        .foregroundColor(.black)
+                        
                         .font(.system(.largeTitle, design: .rounded))
                         .fontWeight(.bold)
                         .padding()
@@ -65,7 +65,7 @@ struct plant7: View {
                         }
                     }
             }.font(.system(size: 25, design: .rounded))
-                .foregroundColor(.black).padding()
+               .padding()
            
            //植物介紹
             DisclosureGroup("胎生苗"){
@@ -74,7 +74,7 @@ struct plant7: View {
                     .resizable()
                     .scaledToFit()
             }.font(.system(size: 25, design: .rounded))
-                .foregroundColor(.black).padding()
+             .padding()
 
             DisclosureGroup("花"){
                 Text("花瓣五枚呈白絲狀，花萼五片，呈白色板狀，常被誤認為花瓣。\n聚繖花序，雄蕊多數。")
@@ -82,7 +82,7 @@ struct plant7: View {
                     .resizable()
                     .scaledToFit()
             }.font(.system(size: 25, design: .rounded))
-                .foregroundColor(.black).padding()
+             .padding()
 
             DisclosureGroup("果"){
                 Text("圓錐形，花萼宿存。果實成熟時長出筆胎狀胎生苗。")
@@ -90,21 +90,14 @@ struct plant7: View {
                     .resizable()
                     .scaledToFit()
             }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+             .padding()
 
-            DisclosureGroup("相關知識"){
-                Text("夏天提供樹蔭，冬天不遮陽光。")
-                Text("絕佳行道樹種，核果為白頭翁的最愛。")
-            }.font(.system(size: 25, design: .rounded))
-                .foregroundColor(.black).padding()
-
-                    
             Image("水筆仔樹")
                 .resizable()
                 .scaledToFit()
             
             }
-        }
+        }.foregroundColor(.primary)
     }
 }
 

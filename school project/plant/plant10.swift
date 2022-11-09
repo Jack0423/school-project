@@ -18,7 +18,7 @@ struct plant10: View {
             VStack{
                 HStack{
                     Text("團扇仙人掌")
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                         .font(.system(.largeTitle, design: .rounded))
                         .fontWeight(.bold)
                         .padding()
@@ -65,7 +65,7 @@ struct plant10: View {
                         }
                     }
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
             
                 //植物介紹
                 DisclosureGroup("葉"){
@@ -74,7 +74,7 @@ struct plant10: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                 DisclosureGroup("花"){
                     Text("黃色，具多數雄蕊。")
@@ -82,7 +82,7 @@ struct plant10: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                 DisclosureGroup("果"){
                     Text("漿果，成熟時紫色。")
@@ -90,7 +90,7 @@ struct plant10: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                   .padding()
 
                 DisclosureGroup("莖"){
                     Text("綠色肉質扁平。")
@@ -98,7 +98,7 @@ struct plant10: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
                         
                         
                 Image("團扇仙人掌樹")
@@ -106,7 +106,7 @@ struct plant10: View {
                     .scaledToFit()
                 
             }
-        }
+        }.foregroundColor(.primary)
     }
 }
 

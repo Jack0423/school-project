@@ -18,7 +18,7 @@ struct plant5: View {
             VStack{
                 HStack{
                     Text("台灣海桐")
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                         .font(.system(.largeTitle, design: .rounded))
                         .fontWeight(.bold)
                         .padding()
@@ -65,7 +65,7 @@ struct plant5: View {
                         }
                     }
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                   .padding()
             
                 //植物介紹
                 DisclosureGroup("葉"){
@@ -74,7 +74,7 @@ struct plant5: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                 DisclosureGroup("花"){
                     Text("白色，圓錐花絮頂生，香味濃郁。")
@@ -82,7 +82,7 @@ struct plant5: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                 DisclosureGroup("果"){
                     Text("成熟時，橙黃色，蒴果兩裂，種子5～6粒，紅色。")
@@ -90,20 +90,14 @@ struct plant5: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
-
-                DisclosureGroup("相關知識"){
-                    Text("")
-                }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
-                        
+                    .padding()
 
                 Image("台灣海桐樹")
                     .resizable()
                     .scaledToFit()
             
             }
-        }
+        }.foregroundColor(.primary)
     }
 }
 
