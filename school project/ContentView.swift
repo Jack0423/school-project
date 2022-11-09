@@ -11,7 +11,8 @@ import UIKit
 import AVFoundation
 
 let synthesizer = AVSpeechSynthesizer() //語音導覽
-var voicestatus :Int = 0 //語音導覽狀態
+var utterance = AVSpeechUtterance(string: "空")
+
 
     
 struct ContentView: View {

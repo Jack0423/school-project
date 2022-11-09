@@ -11,6 +11,7 @@ import AVFoundation
 
 
 struct birdmenu: View {
+    
     var birddata :[[String]] = [
         ["0","1","2","3","4","5","6","7"],
         ["1","蒼鷺","灰鷺","","4",
@@ -111,7 +112,6 @@ struct birdmenu: View {
     ]
     
     var body: some View {
-        synthesizer.stopSpeaking(at: AVSpeechBoundary.immediate)
         List{
             ForEach (1..<birddata.count) { index in
                 NavigationLink(birddata[index][1]){
@@ -120,5 +120,8 @@ struct birdmenu: View {
             }
         }.background(Color(UIColor.secondarySystemBackground))
             .navigationTitle("鳥類")
+        utterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
+        utterance.rate = 0.4
+        synthesizer.stopSpeaking(at: AVSpeechBoundary.immediate)
     }
 }

@@ -21,7 +21,7 @@ struct birdmod: View { //struct寫bird加一個數字
     let birdlink1 :String //連結1
     let birdlink2 :String //連結2
     //let synthesizer = AVSpeechSynthesizer() //語音導覽
-    //@State var voicestatus :Int = 0 //語音導覽狀態
+    @State var voicestatus :Int = 0 //語音導覽狀態
     let player = AVPlayer() //鳥叫聲
     
     var body: some View {
@@ -54,9 +54,9 @@ struct birdmod: View { //struct寫bird加一個數字
                             Button{
                                 var birdvoice = birdinfo.replacingOccurrences(of: "\n",with: " ")
                                 birdvoice = birdvoice.replacingOccurrences(of: "•",with: " ")
-                                let utterance = AVSpeechUtterance(string: birdvoice)
-                                utterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
-                                utterance.rate = 0.4
+                                utterance = AVSpeechUtterance(string: birdvoice)
+                                //utterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
+                                //utterance.rate = 0.4
                                 synthesizer.speak(utterance)
                                 voicestatus = 1
                             } label: {
