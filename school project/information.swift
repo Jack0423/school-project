@@ -23,7 +23,7 @@ struct information: View {
             Text("建功高中校網連結：")
             Text("https://www.cksh.hc.edu.tw/")
         }.font(.system(size: wordsize, design: .rounded))
-            .foregroundColor(.black)
+            .foregroundColor(.primary)
             .padding()
     }
 }
