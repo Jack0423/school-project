@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import UIKit
+import AVFoundation
+
 
 struct birdmenu: View {
     var birddata :[[String]] = [
@@ -108,13 +111,14 @@ struct birdmenu: View {
     ]
     
     var body: some View {
-            List{
-                ForEach (1..<birddata.count) { index in
-                    NavigationLink(birddata[index][1]){
-                        birdmod(birdnumber: birddata[index][0], birdname: birddata[index][1], birdname_: birddata[index][2], birdscientific: birddata[index][3], birdinfo: birddata[index][5], birdimg:birddata[index][4], birdlink1: birddata[index][6], birdlink2: birddata[index][7])
-                    }
+        synthesizer.stopSpeaking(at: AVSpeechBoundary.immediate)
+        List{
+            ForEach (1..<birddata.count) { index in
+                NavigationLink(birddata[index][1]){
+                    birdmod(birdnumber: birddata[index][0], birdname: birddata[index][1], birdname_: birddata[index][2], birdscientific: birddata[index][3], birdinfo: birddata[index][5], birdimg:birddata[index][4], birdlink1: birddata[index][6], birdlink2: birddata[index][7])
                 }
-            }.background(Color(UIColor.secondarySystemBackground))
-                .navigationTitle("鳥類")
+            }
+        }.background(Color(UIColor.secondarySystemBackground))
+            .navigationTitle("鳥類")
     }
 }

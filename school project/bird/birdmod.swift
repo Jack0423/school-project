@@ -20,8 +20,8 @@ struct birdmod: View { //struct寫bird加一個數字
     let birdimg :String //圖片數量
     let birdlink1 :String //連結1
     let birdlink2 :String //連結2
-    let synthesizer = AVSpeechSynthesizer() //語音導覽
-    @State var voicestatus :Int = 0 //語音導覽狀態
+    //let synthesizer = AVSpeechSynthesizer() //語音導覽
+    //@State var voicestatus :Int = 0 //語音導覽狀態
     let player = AVPlayer() //鳥叫聲
     
     var body: some View {
@@ -88,8 +88,7 @@ struct birdmod: View { //struct寫bird加一個數字
                             Image(systemName: "stop.circle")
                         }
                     }
-                }.font(.system(size: 25, design: .rounded))
-                        .foregroundColor(.black).padding()
+                }
                 
                 
                 DisclosureGroup("鳥叫聲"){
@@ -104,18 +103,14 @@ struct birdmod: View { //struct寫bird加一個數字
                         Text("播放")
                         Image(systemName: "play.circle")
                     }
-                }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black)
-                    .padding()
+                }
                 
                
                 DisclosureGroup("相關知識"){
                     VStack(alignment: .leading) {
                         Text(birdinfo).padding(.bottom)
                     }.padding()
-                }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black)
-                    .padding()
+                }
                 
                 
                 DisclosureGroup("圖片"){
@@ -128,9 +123,7 @@ struct birdmod: View { //struct寫bird加一個數字
                         Spacer(minLength: 25)
                     }
                     
-                }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black)
-                    .padding()
+                }
                 
                 
                 DisclosureGroup("資料來源"){
@@ -144,11 +137,12 @@ struct birdmod: View { //struct寫bird加一個數字
                              , destination: URL(string: birdlink2)!)
                             .foregroundColor(.blue)
                     }.padding()
-                }   .font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                }
                 
                 
-            }
+            }.font(.system(size: 25, design: .rounded))
+                .padding()
+                .foregroundColor(.primary)
         }
     }
 }
