@@ -455,7 +455,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "tw.edu.hc.cksh.school-project";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Jack1.school-project";
 				PRODUCT_NAME = "金城湖之生態導覽";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_ENABLE_BATCH_MODE = NO;
@@ -485,7 +485,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "tw.edu.hc.cksh.school-project";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Jack1.school-project";
 				PRODUCT_NAME = "金城湖之生態導覽";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_ENABLE_BATCH_MODE = NO;
