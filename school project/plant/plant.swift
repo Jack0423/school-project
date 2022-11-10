@@ -36,6 +36,16 @@ struct plant: View {
             }
         }   .background(Color(UIColor.secondarySystemBackground))
             .navigationTitle("植物")
+            .toolbar {
+                ToolbarItem {
+                    Button{
+                        contextsaying(order: 0, context: " ")
+                    } label: {
+                        Text("停止播放")
+                        Image(systemName: "stop.circle")
+                    }
+                }
+            }.foregroundColor(.primary)
     }
 }
 

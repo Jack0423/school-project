@@ -110,17 +110,30 @@ struct birdmenu: View {
          "https://xeno-canto.org/720562"]
 
     ]
+    //@State private var text = ""
     
     var body: some View {
         List{
             ForEach (1..<birddata.count) { index in
-                NavigationLink(birddata[index][1]){
-                    birdmod(birdnumber: birddata[index][0], birdname: birddata[index][1], birdname_: birddata[index][2], birdscientific: birddata[index][3], birdinfo: birddata[index][5], birdimg:birddata[index][4], birdlink1: birddata[index][6], birdlink2: birddata[index][7])
-                }
+                //if text == "" || birddata[index][1].range(of: text) != nil {
+                    NavigationLink(birddata[index][1]){
+                        birdmod(birdnumber: birddata[index][0], birdname: birddata[index][1], birdname_: birddata[index][2], birdscientific: birddata[index][3], birdinfo: birddata[index][5], birdimg:birddata[index][4], birdlink1: birddata[index][6], birdlink2: birddata[index][7])
+                    }
+                //}
             }
-        }.background(Color(UIColor.secondarySystemBackground))
+        }//.searchable(text: $text)
+            .background(Color(UIColor.secondarySystemBackground))
             .navigationTitle("鳥類")
-        //contextsaying(order: 0, context: " ")
+            .toolbar {
+                ToolbarItem {
+                    Button{
+                        contextsaying(order: 0, context: " ")
+                    } label: {
+                        Text("停止播放")
+                        Image(systemName: "stop.circle")
+                    }
+                }
+            }.foregroundColor(.primary)
         
     }
 }
