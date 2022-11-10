@@ -47,6 +47,7 @@
 		71378A07283F35FB009F9861 /* 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 713789F4283F35FB009F9861 /* 2.mp3 */; };
 		71378A08283F35FB009F9861 /* 11.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 713789F5283F35FB009F9861 /* 11.mp3 */; };
 		71EB49C6285D964400536A68 /* information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EB49C5285D964400536A68 /* information.swift */; };
+		71F94355291D40C8007F5672 /* contextsaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F94354291D40C8007F5672 /* contextsaying.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		713789F4283F35FB009F9861 /* 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2.mp3; sourceTree = "<group>"; };
 		713789F5283F35FB009F9861 /* 11.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 11.mp3; sourceTree = "<group>"; };
 		71EB49C5285D964400536A68 /* information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = information.swift; sourceTree = "<group>"; };
+		71F94354291D40C8007F5672 /* contextsaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contextsaying.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 				04DBB3E827E0343E00288D64 /* school_projectApp.swift */,
 				04DBB3EA27E0343E00288D64 /* ContentView.swift */,
 				71EB49C5285D964400536A68 /* information.swift */,
+				71F94354291D40C8007F5672 /* contextsaying.swift */,
 				0437172527E9FC52008E7AD4 /* bird */,
 				0437172627E9FC7B008E7AD4 /* plant */,
 				0437172927E9FD0C008E7AD4 /* place */,
@@ -290,6 +293,7 @@
 			files = (
 				04866EC227EDFFA900F7552F /* plant9.swift in Sources */,
 				04866EBE27EDFE2C00F7552F /* plant7.swift in Sources */,
+				71F94355291D40C8007F5672 /* contextsaying.swift in Sources */,
 				04866EB427EDFDE400F7552F /* plant2.swift in Sources */,
 				04DBB3EB27E0343E00288D64 /* ContentView.swift in Sources */,
 				0437171C27E97D47008E7AD4 /* plant.swift in Sources */,

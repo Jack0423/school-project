@@ -54,10 +54,11 @@ struct birdmod: View { //struct寫bird加一個數字
                             Button{
                                 var birdvoice = birdinfo.replacingOccurrences(of: "\n",with: " ")
                                 birdvoice = birdvoice.replacingOccurrences(of: "•",with: " ")
-                                utterance = AVSpeechUtterance(string: birdvoice)
+                                //utterance = AVSpeechUtterance(string: birdvoice)
                                 //utterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
                                 //utterance.rate = 0.4
-                                synthesizer.speak(utterance)
+                                //synthesizer.speak(utterance)
+                                contextsaying(order: 1, context: birdvoice)
                                 voicestatus = 1
                             } label: {
                                 Text("播放")
@@ -65,7 +66,8 @@ struct birdmod: View { //struct寫bird加一個數字
                             }
                         }else if voicestatus == 1 {
                             Button{
-                                synthesizer.pauseSpeaking(at: AVSpeechBoundary.immediate)
+                                //synthesizer.pauseSpeaking(at: AVSpeechBoundary.immediate)
+                                contextsaying(order: 2, context: " ")
                                 voicestatus = 2
                             } label: {
                                 Text("暫停")
@@ -73,7 +75,8 @@ struct birdmod: View { //struct寫bird加一個數字
                             }
                         }else if voicestatus == 2{
                             Button{
-                                synthesizer.continueSpeaking()
+                                //synthesizer.continueSpeaking()
+                                contextsaying(order: 3, context: " ")
                                 voicestatus = 1
                             } label: {
                                 Text("繼續")
@@ -81,7 +84,8 @@ struct birdmod: View { //struct寫bird加一個數字
                             }
                         }
                         Button{
-                            synthesizer.stopSpeaking(at: AVSpeechBoundary.immediate)
+                            //synthesizer.stopSpeaking(at: AVSpeechBoundary.immediate)
+                            contextsaying(order: 0, context: " ")
                             voicestatus = 0;
                         } label: {
                             Text("  停止")

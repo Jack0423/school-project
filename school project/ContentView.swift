@@ -11,7 +11,7 @@ import UIKit
 import AVFoundation
 
 let synthesizer = AVSpeechSynthesizer() //語音導覽
-var utterance = AVSpeechUtterance(string: "空")
+var utterance = AVSpeechUtterance(string: " ")
 
 
     
