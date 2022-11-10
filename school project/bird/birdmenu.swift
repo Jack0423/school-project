@@ -120,8 +120,6 @@ struct birdmenu: View {
             }
         }.background(Color(UIColor.secondarySystemBackground))
             .navigationTitle("鳥類")
-        utterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
-        utterance.rate = 0.4
-        synthesizer.stopSpeaking(at: AVSpeechBoundary.immediate)
+        contextsaying(order: 0, context: " ")
     }
 }
