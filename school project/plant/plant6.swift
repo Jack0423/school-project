@@ -18,7 +18,7 @@ struct plant6: View {
             VStack{
                 HStack{
                     Text("海檬果")
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                         .font(.system(.largeTitle, design: .rounded))
                         .fontWeight(.bold)
                         .padding()
@@ -65,7 +65,7 @@ struct plant6: View {
                         }
                     }
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                 //植物介紹
                 DisclosureGroup("葉"){
@@ -74,7 +74,7 @@ struct plant6: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                 DisclosureGroup("花"){
                     Text("白色，長漏斗型，先端五裂，花瓣中心淡紅色，有毛。")
@@ -82,7 +82,7 @@ struct plant6: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                 DisclosureGroup("果"){
                     Text("含豐富纖維質，成熟時紅色。")
@@ -90,12 +90,12 @@ struct plant6: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                 DisclosureGroup("相關知識"){
                     Text("全株有毒，誤食會有嘔吐、呼吸困難，甚至致命之虞！")
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                         
                 Image("海檬果樹")
@@ -103,7 +103,7 @@ struct plant6: View {
                     .scaledToFit()
                 
             }
-        }
+        }.foregroundColor(.primary)
     }
 }
 

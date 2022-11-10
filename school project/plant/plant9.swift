@@ -18,7 +18,7 @@ struct plant9: View {
             VStack{
                 HStack{
                     Text("林投")
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                         .font(.system(.largeTitle, design: .rounded))
                         .fontWeight(.bold)
                         .padding()
@@ -65,7 +65,7 @@ struct plant9: View {
                         }
                     }
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                 //植物介紹
                 DisclosureGroup("葉"){
@@ -74,7 +74,7 @@ struct plant9: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                 DisclosureGroup("莖"){
                     Text("多分枝，不定氣根多，常形成支持根。")
@@ -82,7 +82,7 @@ struct plant9: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                 DisclosureGroup("果"){
                     Text("形狀像鳳梨，質輕富纖維，可藉水力傳播，屬於海漂型植物。")
@@ -90,7 +90,7 @@ struct plant9: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
             
                         
                 Image("林投樹")
@@ -98,7 +98,7 @@ struct plant9: View {
                     .scaledToFit()
                 
             }
-        }
+        }.foregroundColor(.primary)
     }
 }
 

@@ -18,7 +18,7 @@ struct plant3: View {
             VStack{
                 HStack{
                     Text("木麻黃")
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                         .font(.system(.largeTitle, design: .rounded))
                         .fontWeight(.bold)
                         .padding()
@@ -65,7 +65,7 @@ struct plant3: View {
                         }
                     }
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                   .padding()
                 
                 //植物介紹
                 DisclosureGroup("葉"){
@@ -74,15 +74,15 @@ struct plant3: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
                 
                 DisclosureGroup("根"){
                     Text("有根瘤。")
-                    Image("木麻黃根")
+                    Image("木麻黃莖")
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
                 
                 DisclosureGroup("小莖"){
                     Text("綠色長條狀。")
@@ -90,7 +90,7 @@ struct plant3: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                 DisclosureGroup("果"){
                     Text("毬果狀之聚合果。")
@@ -98,13 +98,13 @@ struct plant3: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                 DisclosureGroup("相關知識"){
                     Text("常被誤認為是裸子植物。")
                     Text("少數具固氮作用的非豆科植物。")
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
                 
                 
                 Image("木麻黃樹")
@@ -112,7 +112,7 @@ struct plant3: View {
                     .scaledToFit()
                 
             }
-        }
+        } .foregroundColor(.primary)
     }
 }
 

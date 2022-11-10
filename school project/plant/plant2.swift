@@ -19,7 +19,7 @@ struct plant2: View {
             VStack{
                 HStack{
                     Text("黃槿")
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                         .font(.system(.largeTitle, design: .rounded))
                         .fontWeight(.bold)
                         .padding()
@@ -67,7 +67,7 @@ struct plant2: View {
                         }
                     }
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
 
                 //植物介紹
                 DisclosureGroup("葉"){
@@ -76,7 +76,7 @@ struct plant2: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
                 
                 DisclosureGroup("花"){
                     Text("黃色鐘型，花心暗紫色，花瓣五枚，覆瓦狀排列。")
@@ -84,7 +84,7 @@ struct plant2: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
                 
                 DisclosureGroup("果"){
                     Text("蒴果。")
@@ -92,12 +92,12 @@ struct plant2: View {
                         .resizable()
                         .scaledToFit()
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
                 
                 DisclosureGroup("相關知識"){
                     Text("葉常被用於包粿之襯底，俗稱：粿葉樹。")
                 }.font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
                 
                 
                 Image("黃槿樹")
@@ -105,7 +105,7 @@ struct plant2: View {
                     .scaledToFit()
                 
             }
-        }
+        } .foregroundColor(.primary)
     }
 }
 

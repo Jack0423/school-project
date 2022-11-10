@@ -18,7 +18,7 @@ struct plant1: View {
             VStack{
                 HStack{
                     Text("苦楝")
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                         .font(.system(.largeTitle, design: .rounded))
                         .fontWeight(.bold)
                         .padding()
@@ -67,7 +67,7 @@ struct plant1: View {
                         }
                     }
                 }   .font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
                 
                 //植物介紹
                 DisclosureGroup("葉"){
@@ -76,7 +76,7 @@ struct plant1: View {
                         .resizable()
                         .scaledToFit()
                 }   .font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
                 
                 DisclosureGroup("花"){
                     Text("淡紫色圓錐花序。")
@@ -84,7 +84,7 @@ struct plant1: View {
                         .resizable()
                         .scaledToFit()
                 }   .font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
                 
                 DisclosureGroup("果"){
                     Text("核果成熟時呈金黃色。")
@@ -92,13 +92,13 @@ struct plant1: View {
                         .resizable()
                         .scaledToFit()
                 }   .font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                    .padding()
                 
                 DisclosureGroup("相關知識"){
                     Text("夏天提供樹蔭，冬天不遮陽光。")
                     Text("絕佳行道樹種，核果為白頭翁的最愛。")
                 }   .font(.system(size: 25, design: .rounded))
-                    .foregroundColor(.black).padding()
+                   .padding()
                 
                 //植物圖
                 Image("苦楝樹")
@@ -106,7 +106,7 @@ struct plant1: View {
                     .scaledToFit()
             
             }
-        }
+        } .foregroundColor(.primary)
     }
 }
 
