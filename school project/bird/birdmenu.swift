@@ -120,6 +120,7 @@ struct birdmenu: View {
             }
         }.background(Color(UIColor.secondarySystemBackground))
             .navigationTitle("鳥類")
-        contextsaying(order: 0, context: " ")
+        //contextsaying(order: 0, context: " ")
+        
     }
 }
