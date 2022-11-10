@@ -30,10 +30,8 @@ struct plant3: View {
                     HStack{
                         if voicestatus == 0 {
                             Button{
-                                let utterance = AVSpeechUtterance(string: "木麻黃:::::::木麻黃科::::常綠大喬木::::小莖::綠色長條狀::::葉::很小::::鞘狀齒列::::輪生於小莖的節上::::根::有根瘤::::果實::毬果狀之聚合果::::常被誤認為是裸子植物::::少數具固氮作用的非豆科植物")
-                                utterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
-                                utterance.rate = 0.4
-                                synthesizer.speak(utterance)
+                                let plantvoice :String =  "木麻黃:::::::木麻黃科::::常綠大喬木::::小莖::綠色長條狀::::葉::很小::::鞘狀齒列::::輪生於小莖的節上::::根::有根瘤::::果實::毬果狀之聚合果::::常被誤認為是裸子植物::::少數具固氮作用的非豆科植物"
+                                contextsaying(order: 1, context: plantvoice)
                                 voicestatus = 1
                             } label: {
                                 Text("播放")
@@ -41,7 +39,7 @@ struct plant3: View {
                             }
                         }else if voicestatus == 1 {
                             Button{
-                                synthesizer.pauseSpeaking(at: AVSpeechBoundary.immediate)
+                                contextsaying(order: 2, context: " ")
                                 voicestatus = 2
                             } label: {
                                 Text("暫停")
@@ -49,7 +47,7 @@ struct plant3: View {
                             }
                         }else if voicestatus == 2{
                             Button{
-                                synthesizer.continueSpeaking()
+                                contextsaying(order: 3, context: " ")
                                 voicestatus = 1
                             } label: {
                                 Text("繼續")
@@ -57,7 +55,7 @@ struct plant3: View {
                             }
                         }
                         Button{
-                            synthesizer.stopSpeaking(at: AVSpeechBoundary.immediate)
+                            contextsaying(order: 0, context: " ")
                             voicestatus = 0;
                         } label: {
                             Text("  停止")

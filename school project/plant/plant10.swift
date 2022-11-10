@@ -30,10 +30,8 @@ struct plant10: View {
                     HStack{
                         if voicestatus == 0 {
                             Button{
-                                let utterance = AVSpeechUtterance(string: "團扇仙人掌:::::::仙人掌科::::是製作澎湖特產仙人掌冰的材料::::葉::特化成針刺狀::::莖::綠色肉質扁平::::花::黃色::::具多數雄蕊::::果實::漿果::::成熟時紫色")
-                                utterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
-                                utterance.rate = 0.4
-                                synthesizer.speak(utterance)
+                                let plantvoice :String =  "團扇仙人掌:::::::仙人掌科::::是製作澎湖特產仙人掌冰的材料::::葉::特化成針刺狀::::莖::綠色肉質扁平::::花::黃色::::具多數雄蕊::::果實::漿果::::成熟時紫色"
+                                contextsaying(order: 1, context: plantvoice)
                                 voicestatus = 1
                             } label: {
                                 Text("播放")
@@ -41,7 +39,7 @@ struct plant10: View {
                             }
                         }else if voicestatus == 1 {
                             Button{
-                                synthesizer.pauseSpeaking(at: AVSpeechBoundary.immediate)
+                                contextsaying(order: 2, context: " ")
                                 voicestatus = 2
                             } label: {
                                 Text("暫停")
@@ -49,7 +47,7 @@ struct plant10: View {
                             }
                         }else if voicestatus == 2{
                             Button{
-                                synthesizer.continueSpeaking()
+                                contextsaying(order: 3, context: " ")
                                 voicestatus = 1
                             } label: {
                                 Text("繼續")
@@ -57,7 +55,7 @@ struct plant10: View {
                             }
                         }
                         Button{
-                            synthesizer.stopSpeaking(at: AVSpeechBoundary.immediate)
+                            contextsaying(order: 0, context: " ")
                             voicestatus = 0;
                         } label: {
                             Text("  停止")

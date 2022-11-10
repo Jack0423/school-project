@@ -48,9 +48,9 @@ struct ContentView: View {
                            .font(.largeTitle)
                            .foregroundColor(.blue)
                     }.background(
-                        NavigationLink(destination: information(), isActive: $isActive) {
-                            EmptyView()
-                        })
+                    NavigationLink(destination: information(), isActive: $isActive) {
+                        EmptyView()
+                    })
                 
                 }.offset(y:20)
                     

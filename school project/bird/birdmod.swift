@@ -30,7 +30,6 @@ struct birdmod: View { //struct寫bird加一個數字
             VStack{
                 HStack{
                     Text(birdname)
-                        .foregroundColor(.black)
                         .font(.system(.largeTitle, design: .rounded))
                         .fontWeight(.bold)
                         .padding()
@@ -38,12 +37,10 @@ struct birdmod: View { //struct寫bird加一個數字
                     if birdname_ != "0"{
                         Text(birdname_)
                             .font(.system(size: 20, design: .rounded))
-                            .foregroundColor(.black)
                     }
                 }
                 
                 Text(birdscientific)
-                    .foregroundColor(.black)
                     .font(.system(size: 20, design: .rounded))
                     .fontWeight(.bold)
                     .padding()

@@ -10,7 +10,7 @@ import AVFoundation
 
 struct plant1: View {
     var planta:String
-    let synthesizer = AVSpeechSynthesizer() //語音導覽
+    //let synthesizer = AVSpeechSynthesizer() //語音導覽
     @State var voicestatus :Int = 0 //語音導覽狀態
     var body: some View {
         Spacer()
@@ -32,10 +32,11 @@ struct plant1: View {
                     HStack{
                         if voicestatus == 0 {
                             Button{
-                                let utterance = AVSpeechUtterance(string: "苦楝:::::::楝科::::落葉喬木:::: 葉::二至三回羽狀複葉::::花::淡紫色圓錐花序::::果::核果成熟時呈金黃色:::: 夏天提供樹蔭，冬天不遮陽光::::絕佳行道樹種::::核果為白頭翁的最愛")
-                                utterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
-                                utterance.rate = 0.4
-                                synthesizer.speak(utterance)
+                                let plantvoice :String = "苦楝:::::::楝科::::落葉喬木:::: 葉::二至三回羽狀複葉::::花::淡紫色圓錐花序::::果::核果成熟時呈金黃色:::: 夏天提供樹蔭，冬天不遮陽光::::絕佳行道樹種::::核果為白頭翁的最愛"
+                                //utterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
+                                //utterance.rate = 0.4
+                                //synthesizer.speak(utterance)
+                                contextsaying(order: 1, context: plantvoice)
                                 voicestatus = 1
                             } label: {
                                 Text("播放")
@@ -43,7 +44,8 @@ struct plant1: View {
                             }
                         }else if voicestatus == 1 {
                             Button{
-                                synthesizer.pauseSpeaking(at: AVSpeechBoundary.immediate)
+                                //synthesizer.pauseSpeaking(at: AVSpeechBoundary.immediate)
+                                contextsaying(order: 2, context: " ")
                                 voicestatus = 2
                             } label: {
                                 Text("暫停")
@@ -51,7 +53,8 @@ struct plant1: View {
                             }
                         }else if voicestatus == 2{
                             Button{
-                                synthesizer.continueSpeaking()
+                                //synthesizer.continueSpeaking()
+                                contextsaying(order: 3, context: " ")
                                 voicestatus = 1
                             } label: {
                                 Text("繼續")
@@ -59,7 +62,8 @@ struct plant1: View {
                             }
                         }
                         Button{
-                            synthesizer.stopSpeaking(at: AVSpeechBoundary.immediate)
+                            //synthesizer.stopSpeaking(at: AVSpeechBoundary.immediate)
+                            contextsaying(order: 0, context: " ")
                             voicestatus = 0;
                         } label: {
                             Text("  停止")

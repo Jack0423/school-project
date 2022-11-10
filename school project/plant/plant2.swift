@@ -32,10 +32,8 @@ struct plant2: View {
                     HStack{
                         if voicestatus == 0 {
                             Button{
-                                let utterance = AVSpeechUtterance(string: "黃槿:::::::錦葵科:::: 長綠灌木至小喬木::::嫩葉及花序有短柔毛::::葉::心型::::掌狀葉脈::::花::黃色鐘型::::花心暗紫色::::花瓣五枚::::覆瓦狀排列::::果::蒴果::::葉常被用於包粿之襯底::::俗稱::粿葉樹")
-                                utterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
-                                utterance.rate = 0.4
-                                synthesizer.speak(utterance)
+                                let plantvoice :String = "黃槿:::::::錦葵科:::: 長綠灌木至小喬木::::嫩葉及花序有短柔毛::::葉::心型::::掌狀葉脈::::花::黃色鐘型::::花心暗紫色::::花瓣五枚::::覆瓦狀排列::::果::蒴果::::葉常被用於包粿之襯底::::俗稱::粿葉樹"
+                                contextsaying(order: 1, context: plantvoice)
                                 voicestatus = 1
                             } label: {
                                 Text("播放")
@@ -43,7 +41,7 @@ struct plant2: View {
                             }
                         }else if voicestatus == 1 {
                             Button{
-                                synthesizer.pauseSpeaking(at: AVSpeechBoundary.immediate)
+                                contextsaying(order: 2, context: " ")
                                 voicestatus = 2
                             } label: {
                                 Text("暫停")
@@ -51,7 +49,7 @@ struct plant2: View {
                             }
                         }else if voicestatus == 2{
                             Button{
-                                synthesizer.continueSpeaking()
+                                contextsaying(order: 3, context: " ")
                                 voicestatus = 1
                             } label: {
                                 Text("繼續")
@@ -59,7 +57,7 @@ struct plant2: View {
                             }
                         }
                         Button{
-                            synthesizer.stopSpeaking(at: AVSpeechBoundary.immediate)
+                            contextsaying(order: 0, context: " ")
                             voicestatus = 0;
                         } label: {
                             Text("  停止")
